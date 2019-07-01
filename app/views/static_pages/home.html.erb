@@ -1,0 +1,76 @@
+
+<% provide(:title, "Home") %>
+
+<% if current_user %>
+
+  <% if current_user.access_granted? %>
+    <div class="jumbotron" style="background-color:silver">
+      <table class="table table-hover" style="background-color: whitesmoke">
+        <thead>
+        <tr>
+          <th>Modules</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><%= link_to "General Administration", rails_admin_path %> &raquo; </td>
+        </tr>
+        <tr>
+          <td><%= link_to "Client Records", '#' %></td>
+        </tr>
+        <tr>
+          <td><%= link_to "Application Records", '#' %></td>
+        </tr>
+        <tr>
+          <td><%= link_to "Network Switches Connections", '#' %></td>
+        </tr>
+        <tr>
+          <td><%= link_to "Open Service Requests", '#' %></td>
+        </tr>
+        <tr>
+          <td><%= link_to "Closed Service Requests", '#' %></td>
+        </tr>
+
+        <% if current_user.admin? %>
+          <tr>
+            <td><%= link_to "All Service Requests", '#' %></td>
+            <td> </td>
+          </tr>
+        <% end %>
+
+        </tbody>
+      </table>
+    </div>
+
+  <% else %>
+    <div class="jumbotron"style="background-color: #730E15;color: white">
+      Your Access Request is currently under review.  Please contact the system administrator
+      for more information.
+    </div>
+  <% end  %>
+
+
+<% else %>
+
+  <div class="jumbotron" style="background-color: silver">
+    <div class="breadcrumb" style="background-color: gray;color:white">
+      <h3>Visum</h3>
+    </div>
+    <div class="jumbotron">
+      <%= @visitor_view_desc %>
+    </div>
+
+    <div class="breadcrumb" style="background-color: gray; color: #730E15">
+      <%= @notice_of_access_request %>
+    </div>
+
+<% end %>
+
+
+
+
+</div>
+
+
+<br> <br>
