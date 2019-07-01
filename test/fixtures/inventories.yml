@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  department: MyString
+  active: false
+  user_id: 1
+  period_from: 2019-07-01
+  department_id: 1
+  location: MyString
+  inventory_number: MyString
+
+two:
+  department: MyString
+  active: false
+  user_id: 1
+  period_from: 2019-07-01
+  department_id: 1
+  location: MyString
+  inventory_number: MyString

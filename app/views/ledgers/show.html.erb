@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @ledger.month %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @ledger.year %>
+</p>
+
+<p>
+  <strong>Ledger date:</strong>
+  <%= @ledger.ledger_date %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ledger.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ledger.user_id %>
+</p>
+
+<p>
+  <strong>Annual budget bal:</strong>
+  <%= @ledger.annual_budget_bal %>
+</p>
+
+<p>
+  <strong>Annual cashflow bal:</strong>
+  <%= @ledger.annual_cashflow_bal %>
+</p>
+
+<p>
+  <strong>Annual total income:</strong>
+  <%= @ledger.annual_total_income %>
+</p>
+
+<p>
+  <strong>Annual total expenditure:</strong>
+  <%= @ledger.annual_total_expenditure %>
+</p>
+
+<p>
+  <strong>Ledger number:</strong>
+  <%= @ledger.ledger_number %>
+</p>
+
+<p>
+  <strong>Reference number:</strong>
+  <%= @ledger.reference_number %>
+</p>
+
+<p>
+  <strong>Act inflow other:</strong>
+  <%= @ledger.act_inflow_other %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @ledger.note %>
+</p>
+
+<p>
+  <strong>Annual budgeted income:</strong>
+  <%= @ledger.annual_budgeted_income %>
+</p>
+
+<p>
+  <strong>Annual budgeted expenses:</strong>
+  <%= @ledger.annual_budgeted_expenses %>
+</p>
+
+<%= link_to 'Edit', edit_ledger_path(@ledger) %> |
+<%= link_to 'Back', ledgers_path %>

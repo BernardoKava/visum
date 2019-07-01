@@ -1,0 +1,2 @@
+class IssueManagement < ApplicationRecord
+end

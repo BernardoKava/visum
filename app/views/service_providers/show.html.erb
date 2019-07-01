@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @service_provider.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @service_provider.address %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @service_provider.telephone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @service_provider.email %>
+</p>
+
+<p>
+  <strong>Acc number:</strong>
+  <%= @service_provider.acc_number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @service_provider.user_id %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @service_provider.active %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @service_provider.link %>
+</p>
+
+<%= link_to 'Edit', edit_service_provider_path(@service_provider) %> |
+<%= link_to 'Back', service_providers_path %>

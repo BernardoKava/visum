@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Employmentreferences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Referee name</th>
+      <th>Referee telephone</th>
+      <th>Referee email</th>
+      <th>Referee details</th>
+      <th>Person</th>
+      <th>Referee active</th>
+      <th>User</th>
+      <th>Employment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employmentreferences.each do |employmentreference| %>
+      <tr>
+        <td><%= employmentreference.referee_name %></td>
+        <td><%= employmentreference.referee_telephone %></td>
+        <td><%= employmentreference.referee_email %></td>
+        <td><%= employmentreference.referee_details %></td>
+        <td><%= employmentreference.person_id %></td>
+        <td><%= employmentreference.referee_active %></td>
+        <td><%= employmentreference.user_id %></td>
+        <td><%= employmentreference.employment_id %></td>
+        <td><%= link_to 'Show', employmentreference %></td>
+        <td><%= link_to 'Edit', edit_employmentreference_path(employmentreference) %></td>
+        <td><%= link_to 'Destroy', employmentreference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Employmentreference', new_employmentreference_path %>

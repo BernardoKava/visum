@@ -1,0 +1,20 @@
+
+<%= simple_form_for(@employmentreference) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :referee_name %>
+    <%= f.input :referee_telephone %>
+    <%= f.input :referee_email %>
+    <%= f.input :referee_details %>
+    <%= f.input :person_id %>
+    <%= f.input :referee_active %>
+    <%= f.input :user_id %>
+    <%= f.input :employment_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Inventory:</strong>
+  <%= @item.inventory_id %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @item.item %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @item.quantity %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @item.value %>
+</p>
+
+<p>
+  <strong>Virtual:</strong>
+  <%= @item.virtual %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @financialinstitution.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @financialinstitution.description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @financialinstitution.address %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @financialinstitution.telephone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @financialinstitution.email %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @financialinstitution.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @financialinstitution.latitude %>
+</p>
+
+<p>
+  <strong>Institution code:</strong>
+  <%= @financialinstitution.institution_code %>
+</p>
+
+<%= link_to 'Edit', edit_financialinstitution_path(@financialinstitution) %> |
+<%= link_to 'Back', financialinstitutions_path %>

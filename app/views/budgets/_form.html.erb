@@ -1,0 +1,20 @@
+
+<%= simple_form_for(@budget) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :user_id %>
+    <%= f.input :month %>
+    <%= f.input :year %>
+    <%= f.input :budget_date %>
+    <%= f.input :name %>
+    <%= f.input :balance %>
+    <%= f.input :budget_number %>
+    <%= f.input :reference_number %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @expense.owner %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @expense.amount %>
+</p>
+
+<p>
+  <strong>Expense type:</strong>
+  <%= @expense.expense_type %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @expense.user_id %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @expense.budget_id %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @expense.details %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @expense.month %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @expense.year %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @expense.person_id %>
+</p>
+
+<p>
+  <strong>Outflowtype:</strong>
+  <%= @expense.outflowtype_id %>
+</p>
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>

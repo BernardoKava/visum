@@ -1,0 +1,2 @@
+class LoanRegistration < ApplicationRecord
+end

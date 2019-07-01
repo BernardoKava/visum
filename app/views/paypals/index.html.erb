@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Paypals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>T date</th>
+      <th>T time</th>
+      <th>Timezone</th>
+      <th>Name</th>
+      <th>T type</th>
+      <th>Status</th>
+      <th>Currency</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @paypals.each do |paypal| %>
+      <tr>
+        <td><%= paypal.t_date %></td>
+        <td><%= paypal.t_time %></td>
+        <td><%= paypal.timezone %></td>
+        <td><%= paypal.name %></td>
+        <td><%= paypal.t_type %></td>
+        <td><%= paypal.status %></td>
+        <td><%= paypal.currency %></td>
+        <td><%= paypal.amount %></td>
+        <td><%= link_to 'Show', paypal %></td>
+        <td><%= link_to 'Edit', edit_paypal_path(paypal) %></td>
+        <td><%= link_to 'Destroy', paypal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Paypal', new_paypal_path %>

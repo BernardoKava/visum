@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Loan Registrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Financialinstitution</th>
+      <th>Loan type</th>
+      <th>Loan term</th>
+      <th>Rationale</th>
+      <th>Amount</th>
+      <th>Loan reference</th>
+      <th>Drawdown date</th>
+      <th>Final payment date</th>
+      <th>Final payment date</th>
+      <th>User</th>
+      <th>Person</th>
+      <th>Internal loan</th>
+      <th>Outstanding</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @loan_registrations.each do |loan_registration| %>
+      <tr>
+        <td><%= loan_registration.financialinstitution_id %></td>
+        <td><%= loan_registration.loan_type %></td>
+        <td><%= loan_registration.loan_term %></td>
+        <td><%= loan_registration.rationale %></td>
+        <td><%= loan_registration.amount %></td>
+        <td><%= loan_registration.loan_reference %></td>
+        <td><%= loan_registration.drawdown_date %></td>
+        <td><%= loan_registration.final_payment_date %></td>
+        <td><%= loan_registration.final_payment_date %></td>
+        <td><%= loan_registration.user_id %></td>
+        <td><%= loan_registration.person_id %></td>
+        <td><%= loan_registration.internal_loan %></td>
+        <td><%= loan_registration.outstanding %></td>
+        <td><%= loan_registration.active %></td>
+        <td><%= link_to 'Show', loan_registration %></td>
+        <td><%= link_to 'Edit', edit_loan_registration_path(loan_registration) %></td>
+        <td><%= link_to 'Destroy', loan_registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Loan Registration', new_loan_registration_path %>

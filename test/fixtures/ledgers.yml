@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: MyString
+  year: MyString
+  ledger_date: 2019-07-01
+  name: MyString
+  user_id: 1
+  annual_budget_bal: 
+  annual_cashflow_bal: 
+  annual_total_income: 
+  annual_total_expenditure: 
+  ledger_number: MyString
+  reference_number: 1
+  act_inflow_other: 
+  note: MyText
+  annual_budgeted_income: 
+  annual_budgeted_expenses: 
+
+two:
+  month: MyString
+  year: MyString
+  ledger_date: 2019-07-01
+  name: MyString
+  user_id: 1
+  annual_budget_bal: 
+  annual_cashflow_bal: 
+  annual_total_income: 
+  annual_total_expenditure: 
+  ledger_number: MyString
+  reference_number: 1
+  act_inflow_other: 
+  note: MyText
+  annual_budgeted_income: 
+  annual_budgeted_expenses: 

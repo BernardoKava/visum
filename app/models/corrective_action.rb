@@ -1,0 +1,2 @@
+class CorrectiveAction < ApplicationRecord
+end

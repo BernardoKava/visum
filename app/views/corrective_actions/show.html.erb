@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @corrective_action.title %>
+</p>
+
+<p>
+  <strong>Issue management:</strong>
+  <%= @corrective_action.issue_management_id %>
+</p>
+
+<p>
+  <strong>Target completion date:</strong>
+  <%= @corrective_action.target_completion_date %>
+</p>
+
+<p>
+  <strong>Actual completion date:</strong>
+  <%= @corrective_action.actual_completion_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @corrective_action.description %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @corrective_action.person_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @corrective_action.user_id %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @corrective_action.active %>
+</p>
+
+<%= link_to 'Edit', edit_corrective_action_path(@corrective_action) %> |
+<%= link_to 'Back', corrective_actions_path %>

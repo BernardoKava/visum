@@ -1,0 +1,2 @@
+class LoanManagement < ApplicationRecord
+end

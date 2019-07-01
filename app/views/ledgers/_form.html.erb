@@ -1,0 +1,27 @@
+
+<%= simple_form_for(@ledger) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :month %>
+    <%= f.input :year %>
+    <%= f.input :ledger_date %>
+    <%= f.input :name %>
+    <%= f.input :user_id %>
+    <%= f.input :annual_budget_bal %>
+    <%= f.input :annual_cashflow_bal %>
+    <%= f.input :annual_total_income %>
+    <%= f.input :annual_total_expenditure %>
+    <%= f.input :ledger_number %>
+    <%= f.input :reference_number %>
+    <%= f.input :act_inflow_other %>
+    <%= f.input :note %>
+    <%= f.input :annual_budgeted_income %>
+    <%= f.input :annual_budgeted_expenses %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

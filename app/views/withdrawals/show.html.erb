@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @withdrawal.owner %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @withdrawal.amount %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @withdrawal.details %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @withdrawal.user_id %>
+</p>
+
+<p>
+  <strong>Saving:</strong>
+  <%= @withdrawal.saving_id %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @withdrawal.institution %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @withdrawal.month %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @withdrawal.year %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @withdrawal.person_id %>
+</p>
+
+<p>
+  <strong>Financialinstitution:</strong>
+  <%= @withdrawal.financialinstitution_id %>
+</p>
+
+<p>
+  <strong>Origination:</strong>
+  <%= @withdrawal.origination %>
+</p>
+
+<p>
+  <strong>Rationale:</strong>
+  <%= @withdrawal.rationale %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @withdrawal.day %>
+</p>
+
+<p>
+  <strong>Plannedactivity:</strong>
+  <%= @withdrawal.plannedactivity_id %>
+</p>
+
+<%= link_to 'Edit', edit_withdrawal_path(@withdrawal) %> |
+<%= link_to 'Back', withdrawals_path %>

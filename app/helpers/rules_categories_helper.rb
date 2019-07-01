@@ -1,0 +1,2 @@
+module RulesCategoriesHelper
+end

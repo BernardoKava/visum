@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cashflow:</strong>
+  <%= @cashflow_recon.cashflow_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cashflow_recon.user_id %>
+</p>
+
+<p>
+  <strong>Error details:</strong>
+  <%= @cashflow_recon.error_details %>
+</p>
+
+<p>
+  <strong>Reconciliation rationale:</strong>
+  <%= @cashflow_recon.reconciliation_rationale %>
+</p>
+
+<p>
+  <strong>Correction amount:</strong>
+  <%= @cashflow_recon.correction_amount %>
+</p>
+
+<p>
+  <strong>Authorised by:</strong>
+  <%= @cashflow_recon.authorised_by %>
+</p>
+
+<p>
+  <strong>Authorisation date:</strong>
+  <%= @cashflow_recon.authorisation_date %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @cashflow_recon.person_id %>
+</p>
+
+<%= link_to 'Edit', edit_cashflow_recon_path(@cashflow_recon) %> |
+<%= link_to 'Back', cashflow_recons_path %>

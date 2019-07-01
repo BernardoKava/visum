@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @inventory.department %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @inventory.active %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @inventory.user_id %>
+</p>
+
+<p>
+  <strong>Period from:</strong>
+  <%= @inventory.period_from %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @inventory.department_id %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @inventory.location %>
+</p>
+
+<p>
+  <strong>Inventory number:</strong>
+  <%= @inventory.inventory_number %>
+</p>
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

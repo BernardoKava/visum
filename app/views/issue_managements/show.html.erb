@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Issue title:</strong>
+  <%= @issue_management.issue_title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @issue_management.description %>
+</p>
+
+<p>
+  <strong>Completion rate:</strong>
+  <%= @issue_management.completion_rate %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @issue_management.person_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @issue_management.user_id %>
+</p>
+
+<p>
+  <strong>Completion target date:</strong>
+  <%= @issue_management.completion_target_date %>
+</p>
+
+<p>
+  <strong>Completion actual date:</strong>
+  <%= @issue_management.completion_actual_date %>
+</p>
+
+<%= link_to 'Edit', edit_issue_management_path(@issue_management) %> |
+<%= link_to 'Back', issue_managements_path %>

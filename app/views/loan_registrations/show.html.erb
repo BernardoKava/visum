@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Financialinstitution:</strong>
+  <%= @loan_registration.financialinstitution_id %>
+</p>
+
+<p>
+  <strong>Loan type:</strong>
+  <%= @loan_registration.loan_type %>
+</p>
+
+<p>
+  <strong>Loan term:</strong>
+  <%= @loan_registration.loan_term %>
+</p>
+
+<p>
+  <strong>Rationale:</strong>
+  <%= @loan_registration.rationale %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @loan_registration.amount %>
+</p>
+
+<p>
+  <strong>Loan reference:</strong>
+  <%= @loan_registration.loan_reference %>
+</p>
+
+<p>
+  <strong>Drawdown date:</strong>
+  <%= @loan_registration.drawdown_date %>
+</p>
+
+<p>
+  <strong>Final payment date:</strong>
+  <%= @loan_registration.final_payment_date %>
+</p>
+
+<p>
+  <strong>Final payment date:</strong>
+  <%= @loan_registration.final_payment_date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @loan_registration.user_id %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @loan_registration.person_id %>
+</p>
+
+<p>
+  <strong>Internal loan:</strong>
+  <%= @loan_registration.internal_loan %>
+</p>
+
+<p>
+  <strong>Outstanding:</strong>
+  <%= @loan_registration.outstanding %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @loan_registration.active %>
+</p>
+
+<%= link_to 'Edit', edit_loan_registration_path(@loan_registration) %> |
+<%= link_to 'Back', loan_registrations_path %>

@@ -1,0 +1,2 @@
+class SavingRecon < ApplicationRecord
+end

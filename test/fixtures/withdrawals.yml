@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  owner: MyString
+  amount: 
+  details: MyText
+  user_id: 1
+  saving_id: 1
+  institution: MyString
+  month: MyString
+  year: MyString
+  person_id: 1
+  financialinstitution_id: 1
+  origination: MyString
+  rationale: MyText
+  day: MyString
+  plannedactivity_id: 1
+
+two:
+  owner: MyString
+  amount: 
+  details: MyText
+  user_id: 1
+  saving_id: 1
+  institution: MyString
+  month: MyString
+  year: MyString
+  person_id: 1
+  financialinstitution_id: 1
+  origination: MyString
+  rationale: MyText
+  day: MyString
+  plannedactivity_id: 1

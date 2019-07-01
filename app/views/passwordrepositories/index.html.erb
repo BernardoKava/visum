@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Passwordrepositories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>System name</th>
+      <th>System password</th>
+      <th>Active</th>
+      <th>User name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @passwordrepositories.each do |passwordrepository| %>
+      <tr>
+        <td><%= passwordrepository.system_name %></td>
+        <td><%= passwordrepository.system_password %></td>
+        <td><%= passwordrepository.active %></td>
+        <td><%= passwordrepository.user_name %></td>
+        <td><%= link_to 'Show', passwordrepository %></td>
+        <td><%= link_to 'Edit', edit_passwordrepository_path(passwordrepository) %></td>
+        <td><%= link_to 'Destroy', passwordrepository, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Passwordrepository', new_passwordrepository_path %>

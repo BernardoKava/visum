@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @loan_management.year %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @loan_management.month %>
+</p>
+
+<p>
+  <strong>Loan registration:</strong>
+  <%= @loan_management.loan_registration_id %>
+</p>
+
+<p>
+  <strong>Payment date:</strong>
+  <%= @loan_management.payment_date %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @loan_management.amount %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @loan_management.note %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @loan_management.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_loan_management_path(@loan_management) %> |
+<%= link_to 'Back', loan_managements_path %>

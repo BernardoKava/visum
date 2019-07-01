@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @plannedactivity.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @plannedactivity.description %>
+</p>
+
+<p>
+  <strong>Activity date:</strong>
+  <%= @plannedactivity.activity_date %>
+</p>
+
+<p>
+  <strong>Target amount:</strong>
+  <%= @plannedactivity.target_amount %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @plannedactivity.user_id %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @plannedactivity.person_id %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @plannedactivity.active %>
+</p>
+
+<%= link_to 'Edit', edit_plannedactivity_path(@plannedactivity) %> |
+<%= link_to 'Back', plannedactivities_path %>

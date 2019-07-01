@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trans_date: 2019-07-01
+  trans_type: MyString
+  description: MyString
+  trans_value: 
+  account_name: MyString
+  account_number: MyString
+  account_name: MyString
+
+two:
+  trans_date: 2019-07-01
+  trans_type: MyString
+  description: MyString
+  trans_value: 
+  account_name: MyString
+  account_number: MyString
+  account_name: MyString

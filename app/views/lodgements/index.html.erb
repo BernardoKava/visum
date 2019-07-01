@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lodgements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Owner</th>
+      <th>Amount</th>
+      <th>Details</th>
+      <th>User</th>
+      <th>Saving</th>
+      <th>Institution</th>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Person</th>
+      <th>Financialinstitution</th>
+      <th>Origination</th>
+      <th>Rationale</th>
+      <th>Day</th>
+      <th>Plannedactivity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lodgements.each do |lodgement| %>
+      <tr>
+        <td><%= lodgement.owner %></td>
+        <td><%= lodgement.amount %></td>
+        <td><%= lodgement.details %></td>
+        <td><%= lodgement.user_id %></td>
+        <td><%= lodgement.saving_id %></td>
+        <td><%= lodgement.institution %></td>
+        <td><%= lodgement.year %></td>
+        <td><%= lodgement.month %></td>
+        <td><%= lodgement.person_id %></td>
+        <td><%= lodgement.financialinstitution_id %></td>
+        <td><%= lodgement.origination %></td>
+        <td><%= lodgement.rationale %></td>
+        <td><%= lodgement.day %></td>
+        <td><%= lodgement.plannedactivity_id %></td>
+        <td><%= link_to 'Show', lodgement %></td>
+        <td><%= link_to 'Edit', edit_lodgement_path(lodgement) %></td>
+        <td><%= link_to 'Destroy', lodgement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lodgement', new_lodgement_path %>

@@ -1,0 +1,2 @@
+class Plannedactivity < ApplicationRecord
+end

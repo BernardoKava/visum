@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Financialinstitutions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Address</th>
+      <th>Telephone</th>
+      <th>Email</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Institution code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @financialinstitutions.each do |financialinstitution| %>
+      <tr>
+        <td><%= financialinstitution.name %></td>
+        <td><%= financialinstitution.description %></td>
+        <td><%= financialinstitution.address %></td>
+        <td><%= financialinstitution.telephone %></td>
+        <td><%= financialinstitution.email %></td>
+        <td><%= financialinstitution.longitude %></td>
+        <td><%= financialinstitution.latitude %></td>
+        <td><%= financialinstitution.institution_code %></td>
+        <td><%= link_to 'Show', financialinstitution %></td>
+        <td><%= link_to 'Edit', edit_financialinstitution_path(financialinstitution) %></td>
+        <td><%= link_to 'Destroy', financialinstitution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Financialinstitution', new_financialinstitution_path %>

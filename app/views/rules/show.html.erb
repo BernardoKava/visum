@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @rule.category %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @rule.title %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @rule.definition %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @rule.active %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rule.user_id %>
+</p>
+
+<p>
+  <strong>Policy code:</strong>
+  <%= @rule.policy_code %>
+</p>
+
+<p>
+  <strong>Rules category:</strong>
+  <%= @rule.rules_category_id %>
+</p>
+
+<%= link_to 'Edit', edit_rule_path(@rule) %> |
+<%= link_to 'Back', rules_path %>

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Saving Recons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Saving</th>
+      <th>User</th>
+      <th>Error details</th>
+      <th>Reconciliation rationale</th>
+      <th>Correction amount</th>
+      <th>Authorised by</th>
+      <th>Authorisation date</th>
+      <th>Person</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @saving_recons.each do |saving_recon| %>
+      <tr>
+        <td><%= saving_recon.saving_id %></td>
+        <td><%= saving_recon.user_id %></td>
+        <td><%= saving_recon.error_details %></td>
+        <td><%= saving_recon.reconciliation_rationale %></td>
+        <td><%= saving_recon.correction_amount %></td>
+        <td><%= saving_recon.authorised_by %></td>
+        <td><%= saving_recon.authorisation_date %></td>
+        <td><%= saving_recon.person_id %></td>
+        <td><%= link_to 'Show', saving_recon %></td>
+        <td><%= link_to 'Edit', edit_saving_recon_path(saving_recon) %></td>
+        <td><%= link_to 'Destroy', saving_recon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Saving Recon', new_saving_recon_path %>

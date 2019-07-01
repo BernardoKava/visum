@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @lodgement.owner %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @lodgement.amount %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @lodgement.details %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @lodgement.user_id %>
+</p>
+
+<p>
+  <strong>Saving:</strong>
+  <%= @lodgement.saving_id %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @lodgement.institution %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @lodgement.year %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @lodgement.month %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @lodgement.person_id %>
+</p>
+
+<p>
+  <strong>Financialinstitution:</strong>
+  <%= @lodgement.financialinstitution_id %>
+</p>
+
+<p>
+  <strong>Origination:</strong>
+  <%= @lodgement.origination %>
+</p>
+
+<p>
+  <strong>Rationale:</strong>
+  <%= @lodgement.rationale %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @lodgement.day %>
+</p>
+
+<p>
+  <strong>Plannedactivity:</strong>
+  <%= @lodgement.plannedactivity_id %>
+</p>
+
+<%= link_to 'Edit', edit_lodgement_path(@lodgement) %> |
+<%= link_to 'Back', lodgements_path %>

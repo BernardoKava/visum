@@ -1,0 +1,2 @@
+class RentManagement < ApplicationRecord
+end

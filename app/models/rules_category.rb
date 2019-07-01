@@ -1,0 +1,2 @@
+class RulesCategory < ApplicationRecord
+end

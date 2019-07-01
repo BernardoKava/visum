@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ledgers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Year</th>
+      <th>Ledger date</th>
+      <th>Name</th>
+      <th>User</th>
+      <th>Annual budget bal</th>
+      <th>Annual cashflow bal</th>
+      <th>Annual total income</th>
+      <th>Annual total expenditure</th>
+      <th>Ledger number</th>
+      <th>Reference number</th>
+      <th>Act inflow other</th>
+      <th>Note</th>
+      <th>Annual budgeted income</th>
+      <th>Annual budgeted expenses</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ledgers.each do |ledger| %>
+      <tr>
+        <td><%= ledger.month %></td>
+        <td><%= ledger.year %></td>
+        <td><%= ledger.ledger_date %></td>
+        <td><%= ledger.name %></td>
+        <td><%= ledger.user_id %></td>
+        <td><%= ledger.annual_budget_bal %></td>
+        <td><%= ledger.annual_cashflow_bal %></td>
+        <td><%= ledger.annual_total_income %></td>
+        <td><%= ledger.annual_total_expenditure %></td>
+        <td><%= ledger.ledger_number %></td>
+        <td><%= ledger.reference_number %></td>
+        <td><%= ledger.act_inflow_other %></td>
+        <td><%= ledger.note %></td>
+        <td><%= ledger.annual_budgeted_income %></td>
+        <td><%= ledger.annual_budgeted_expenses %></td>
+        <td><%= link_to 'Show', ledger %></td>
+        <td><%= link_to 'Edit', edit_ledger_path(ledger) %></td>
+        <td><%= link_to 'Destroy', ledger, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ledger', new_ledger_path %>

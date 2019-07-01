@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Saving:</strong>
+  <%= @saving_recon.saving_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @saving_recon.user_id %>
+</p>
+
+<p>
+  <strong>Error details:</strong>
+  <%= @saving_recon.error_details %>
+</p>
+
+<p>
+  <strong>Reconciliation rationale:</strong>
+  <%= @saving_recon.reconciliation_rationale %>
+</p>
+
+<p>
+  <strong>Correction amount:</strong>
+  <%= @saving_recon.correction_amount %>
+</p>
+
+<p>
+  <strong>Authorised by:</strong>
+  <%= @saving_recon.authorised_by %>
+</p>
+
+<p>
+  <strong>Authorisation date:</strong>
+  <%= @saving_recon.authorisation_date %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @saving_recon.person_id %>
+</p>
+
+<%= link_to 'Edit', edit_saving_recon_path(@saving_recon) %> |
+<%= link_to 'Back', saving_recons_path %>

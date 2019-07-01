@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @rent_management.year %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @rent_management.month %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @rent_management.amount %>
+</p>
+
+<p>
+  <strong>Date collected:</strong>
+  <%= @rent_management.date_collected %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @rent_management.details %>
+</p>
+
+<p>
+  <strong>Collected by:</strong>
+  <%= @rent_management.collected_by %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rent_management.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_rent_management_path(@rent_management) %> |
+<%= link_to 'Back', rent_managements_path %>

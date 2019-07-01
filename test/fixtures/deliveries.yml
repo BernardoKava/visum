@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  delivery_date: 2019-07-01
+  user_id: 1
+  receiver: MyString
+  person_id: 1
+  delivery_number: MyString
+
+two:
+  delivery_date: 2019-07-01
+  user_id: 1
+  receiver: MyString
+  person_id: 1
+  delivery_number: MyString
