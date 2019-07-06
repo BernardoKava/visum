@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Network Switches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code name</th>
+      <th>Branding</th>
+      <th>Number of ports</th>
+      <th>S location</th>
+      <th>Ip address</th>
+      <th>User name</th>
+      <th>Password</th>
+      <th>Active</th>
+      <th>Notes</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @network_switches.each do |network_switch| %>
+      <tr>
+        <td><%= network_switch.code_name %></td>
+        <td><%= network_switch.branding %></td>
+        <td><%= network_switch.number_of_ports %></td>
+        <td><%= network_switch.s_location %></td>
+        <td><%= network_switch.ip_address %></td>
+        <td><%= network_switch.user_name %></td>
+        <td><%= network_switch.password %></td>
+        <td><%= network_switch.active %></td>
+        <td><%= network_switch.notes %></td>
+        <td><%= network_switch.user_id %></td>
+        <td><%= link_to 'Show', network_switch %></td>
+        <td><%= link_to 'Edit', edit_network_switch_path(network_switch) %></td>
+        <td><%= link_to 'Destroy', network_switch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Network Switch', new_network_switch_path %>

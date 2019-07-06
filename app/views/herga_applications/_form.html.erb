@@ -1,0 +1,26 @@
+
+<%= simple_form_for(@herga_application) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :dev_framework %>
+    <%= f.input :framework_description %>
+    <%= f.input :framework_version %>
+    <%= f.input :deployment_status_id %>
+    <%= f.input :deployment_date %>
+    <%= f.input :decomissioned_date %>
+    <%= f.input :person_id %>
+    <%= f.input :server_record_id %>
+    <%= f.input :inhouse_build %>
+    <%= f.input :third_party_build %>
+    <%= f.input :notes %>
+    <%= f.input :user_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

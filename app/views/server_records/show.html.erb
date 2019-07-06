@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @server_record.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @server_record.description %>
+</p>
+
+<p>
+  <strong>Virtual:</strong>
+  <%= @server_record.virtual %>
+</p>
+
+<p>
+  <strong>Operating system:</strong>
+  <%= @server_record.operating_system_id %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @server_record.person_id %>
+</p>
+
+<p>
+  <strong>Deployment status:</strong>
+  <%= @server_record.deployment_status_id %>
+</p>
+
+<p>
+  <strong>Deployment date:</strong>
+  <%= @server_record.deployment_date %>
+</p>
+
+<p>
+  <strong>Domain controller:</strong>
+  <%= @server_record.domain_controller %>
+</p>
+
+<p>
+  <strong>Functional level:</strong>
+  <%= @server_record.functional_level_id %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @server_record.notes %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @server_record.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_server_record_path(@server_record) %> |
+<%= link_to 'Back', server_records_path %>

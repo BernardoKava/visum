@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Request Statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Active</th>
+      <th>Notes</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @request_statuses.each do |request_status| %>
+      <tr>
+        <td><%= request_status.name %></td>
+        <td><%= request_status.description %></td>
+        <td><%= request_status.active %></td>
+        <td><%= request_status.notes %></td>
+        <td><%= request_status.user_id %></td>
+        <td><%= link_to 'Show', request_status %></td>
+        <td><%= link_to 'Edit', edit_request_status_path(request_status) %></td>
+        <td><%= link_to 'Destroy', request_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Request Status', new_request_status_path %>

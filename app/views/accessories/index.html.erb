@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Accessories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Active</th>
+      <th>Hard disk</th>
+      <th>Network card</th>
+      <th>Server record</th>
+      <th>Client record</th>
+      <th>Notes</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accessories.each do |accessory| %>
+      <tr>
+        <td><%= accessory.name %></td>
+        <td><%= accessory.description %></td>
+        <td><%= accessory.active %></td>
+        <td><%= accessory.hard_disk %></td>
+        <td><%= accessory.network_card %></td>
+        <td><%= accessory.server_record_id %></td>
+        <td><%= accessory.client_record_id %></td>
+        <td><%= accessory.notes %></td>
+        <td><%= accessory.user_id %></td>
+        <td><%= link_to 'Show', accessory %></td>
+        <td><%= link_to 'Edit', edit_accessory_path(accessory) %></td>
+        <td><%= link_to 'Destroy', accessory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Accessory', new_accessory_path %>

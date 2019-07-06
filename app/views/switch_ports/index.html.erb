@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Switch Ports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Network switch</th>
+      <th>Port number</th>
+      <th>Server record</th>
+      <th>Client record</th>
+      <th>Notes</th>
+      <th>User</th>
+      <th>Operating system</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @switch_ports.each do |switch_port| %>
+      <tr>
+        <td><%= switch_port.network_switch_id %></td>
+        <td><%= switch_port.port_number %></td>
+        <td><%= switch_port.server_record_id %></td>
+        <td><%= switch_port.client_record_id %></td>
+        <td><%= switch_port.notes %></td>
+        <td><%= switch_port.user_id %></td>
+        <td><%= switch_port.operating_system_id %></td>
+        <td><%= link_to 'Show', switch_port %></td>
+        <td><%= link_to 'Edit', edit_switch_port_path(switch_port) %></td>
+        <td><%= link_to 'Destroy', switch_port, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Switch Port', new_switch_port_path %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  virtual: false
+  operating_system_id: 1
+  person_id: 1
+  deployment_status_id: 1
+  deployment_date: 2019-07-06
+  domain_controller: false
+  functional_level_id: 1
+  notes: MyText
+  user_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  virtual: false
+  operating_system_id: 1
+  person_id: 1
+  deployment_status_id: 1
+  deployment_date: 2019-07-06
+  domain_controller: false
+  functional_level_id: 1
+  notes: MyText
+  user_id: 1

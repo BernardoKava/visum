@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @deployment_status.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @deployment_status.description %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @deployment_status.active %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @deployment_status.notes %>
+</p>
+
+<%= link_to 'Edit', edit_deployment_status_path(@deployment_status) %> |
+<%= link_to 'Back', deployment_statuses_path %>

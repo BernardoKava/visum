@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ticket number:</strong>
+  <%= @service_request.ticket_number %>
+</p>
+
+<p>
+  <strong>Request type:</strong>
+  <%= @service_request.request_type_id %>
+</p>
+
+<p>
+  <strong>Tech service:</strong>
+  <%= @service_request.tech_service_id %>
+</p>
+
+<p>
+  <strong>Problem description:</strong>
+  <%= @service_request.problem_description %>
+</p>
+
+<p>
+  <strong>Request status:</strong>
+  <%= @service_request.request_status_id %>
+</p>
+
+<p>
+  <strong>Case notes:</strong>
+  <%= @service_request.case_notes %>
+</p>
+
+<p>
+  <strong>Case resolution:</strong>
+  <%= @service_request.case_resolution %>
+</p>
+
+<p>
+  <strong>Resolved:</strong>
+  <%= @service_request.resolved %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @service_request.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_service_request_path(@service_request) %> |
+<%= link_to 'Back', service_requests_path %>

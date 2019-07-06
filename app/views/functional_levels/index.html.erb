@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Functional Levels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Active</th>
+      <th>Notes</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @functional_levels.each do |functional_level| %>
+      <tr>
+        <td><%= functional_level.name %></td>
+        <td><%= functional_level.description %></td>
+        <td><%= functional_level.active %></td>
+        <td><%= functional_level.notes %></td>
+        <td><%= functional_level.user_id %></td>
+        <td><%= link_to 'Show', functional_level %></td>
+        <td><%= link_to 'Edit', edit_functional_level_path(functional_level) %></td>
+        <td><%= link_to 'Destroy', functional_level, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Functional Level', new_functional_level_path %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Service Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket number</th>
+      <th>Request type</th>
+      <th>Tech service</th>
+      <th>Problem description</th>
+      <th>Request status</th>
+      <th>Case notes</th>
+      <th>Case resolution</th>
+      <th>Resolved</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @service_requests.each do |service_request| %>
+      <tr>
+        <td><%= service_request.ticket_number %></td>
+        <td><%= service_request.request_type_id %></td>
+        <td><%= service_request.tech_service_id %></td>
+        <td><%= service_request.problem_description %></td>
+        <td><%= service_request.request_status_id %></td>
+        <td><%= service_request.case_notes %></td>
+        <td><%= service_request.case_resolution %></td>
+        <td><%= service_request.resolved %></td>
+        <td><%= service_request.user_id %></td>
+        <td><%= link_to 'Show', service_request %></td>
+        <td><%= link_to 'Edit', edit_service_request_path(service_request) %></td>
+        <td><%= link_to 'Destroy', service_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service Request', new_service_request_path %>

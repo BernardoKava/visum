@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client_record.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @client_record.description %>
+</p>
+
+<p>
+  <strong>Virtual:</strong>
+  <%= @client_record.virtual %>
+</p>
+
+<p>
+  <strong>Operating system:</strong>
+  <%= @client_record.operating_system_id %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @client_record.person_id %>
+</p>
+
+<p>
+  <strong>Deployment date:</strong>
+  <%= @client_record.deployment_date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @client_record.notes %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @client_record.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_client_record_path(@client_record) %> |
+<%= link_to 'Back', client_records_path %>

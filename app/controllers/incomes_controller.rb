@@ -5,6 +5,16 @@ class IncomesController < ApplicationController
   # GET /incomes.json
   def index
     @incomes = Income.all
+
+    @incomes.each do |income|
+      income.income_type = income.inflowtype.name
+      income.save
+    end
+
+    @incomes.each do |income|
+      income.owner = income.person.fullname
+      income.save
+    end
   end
 
   # GET /incomes/1

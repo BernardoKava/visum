@@ -1,0 +1,2 @@
+class FunctionalLevel < ApplicationRecord
+end

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  dev_framework: MyString
+  framework_description: MyText
+  framework_version: MyString
+  deployment_status_id: 1
+  deployment_date: 2019-07-06
+  decomissioned_date: 2019-07-06
+  person_id: 1
+  server_record_id: 1
+  inhouse_build: false
+  third_party_build: false
+  notes: MyText
+  user_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  dev_framework: MyString
+  framework_description: MyText
+  framework_version: MyString
+  deployment_status_id: 1
+  deployment_date: 2019-07-06
+  decomissioned_date: 2019-07-06
+  person_id: 1
+  server_record_id: 1
+  inhouse_build: false
+  third_party_build: false
+  notes: MyText
+  user_id: 1

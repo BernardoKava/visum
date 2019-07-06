@@ -1,0 +1,2 @@
+class HergaApplication < ApplicationRecord
+end

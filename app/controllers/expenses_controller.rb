@@ -5,6 +5,16 @@ class ExpensesController < ApplicationController
   # GET /expenses.json
   def index
     @expenses = Expense.all
+
+    @expenses.each do |expense|
+      expense.expense_type = expense.outflowtype.name
+      expense.save
+    end
+
+    @expenses.each do |expense|
+      expense.owner = expense.person.fullname
+      expense.save
+    end
   end
 
   # GET /expenses/1

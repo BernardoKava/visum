@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_01_212018) do
+ActiveRecord::Schema.define(version: 2019_07_06_142839) do
+
+  create_table "accessories", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "active"
+    t.boolean "hard_disk"
+    t.boolean "network_card"
+    t.integer "server_record_id"
+    t.integer "client_record_id"
+    t.text "notes"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "addresses", force: :cascade do |t|
     t.string "address"
@@ -100,6 +114,19 @@ ActiveRecord::Schema.define(version: 2019_07_01_212018) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "client_records", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "virtual"
+    t.integer "operating_system_id"
+    t.integer "person_id"
+    t.date "deployment_date"
+    t.text "notes"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", force: :cascade do |t|
     t.integer "inventory_id"
     t.integer "user_id"
@@ -142,6 +169,16 @@ ActiveRecord::Schema.define(version: 2019_07_01_212018) do
     t.text "description"
     t.boolean "active"
     t.integer "person_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "deployment_statuses", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "active"
+    t.text "notes"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -210,6 +247,35 @@ ActiveRecord::Schema.define(version: 2019_07_01_212018) do
     t.float "longitude"
     t.float "latitude"
     t.string "institution_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "functional_levels", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "active"
+    t.text "notes"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "herga_applications", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "dev_framework"
+    t.text "framework_description"
+    t.string "framework_version"
+    t.integer "deployment_status_id"
+    t.date "deployment_date"
+    t.date "decomissioned_date"
+    t.integer "person_id"
+    t.integer "server_record_id"
+    t.boolean "inhouse_build"
+    t.boolean "third_party_build"
+    t.text "notes"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -373,6 +439,31 @@ ActiveRecord::Schema.define(version: 2019_07_01_212018) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "network_switches", force: :cascade do |t|
+    t.string "code_name"
+    t.string "branding"
+    t.integer "number_of_ports"
+    t.string "s_location"
+    t.string "ip_address"
+    t.string "user_name"
+    t.string "password"
+    t.boolean "active"
+    t.text "notes"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "operating_systems", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "active"
+    t.text "notes"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "outflows", force: :cascade do |t|
     t.decimal "amount"
     t.text "details"
@@ -496,6 +587,26 @@ ActiveRecord::Schema.define(version: 2019_07_01_212018) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "request_statuses", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "active"
+    t.text "notes"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "request_types", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "active"
+    t.text "notes"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "resources", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -551,6 +662,22 @@ ActiveRecord::Schema.define(version: 2019_07_01_212018) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "server_records", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "virtual"
+    t.integer "operating_system_id"
+    t.integer "person_id"
+    t.integer "deployment_status_id"
+    t.date "deployment_date"
+    t.boolean "domain_controller"
+    t.integer "functional_level_id"
+    t.text "notes"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "service_providers", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -560,6 +687,42 @@ ActiveRecord::Schema.define(version: 2019_07_01_212018) do
     t.integer "user_id"
     t.boolean "active"
     t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "service_requests", force: :cascade do |t|
+    t.integer "ticket_number"
+    t.integer "request_type_id"
+    t.integer "tech_service_id"
+    t.text "problem_description"
+    t.integer "request_status_id"
+    t.text "case_notes"
+    t.text "case_resolution"
+    t.boolean "resolved"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "switch_ports", force: :cascade do |t|
+    t.integer "network_switch_id"
+    t.integer "port_number"
+    t.integer "server_record_id"
+    t.integer "client_record_id"
+    t.text "notes"
+    t.integer "user_id"
+    t.integer "operating_system_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tech_services", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "active"
+    t.text "notes"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

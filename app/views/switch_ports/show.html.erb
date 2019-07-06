@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Network switch:</strong>
+  <%= @switch_port.network_switch_id %>
+</p>
+
+<p>
+  <strong>Port number:</strong>
+  <%= @switch_port.port_number %>
+</p>
+
+<p>
+  <strong>Server record:</strong>
+  <%= @switch_port.server_record_id %>
+</p>
+
+<p>
+  <strong>Client record:</strong>
+  <%= @switch_port.client_record_id %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @switch_port.notes %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @switch_port.user_id %>
+</p>
+
+<p>
+  <strong>Operating system:</strong>
+  <%= @switch_port.operating_system_id %>
+</p>
+
+<%= link_to 'Edit', edit_switch_port_path(@switch_port) %> |
+<%= link_to 'Back', switch_ports_path %>

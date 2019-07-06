@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @accessory.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @accessory.description %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @accessory.active %>
+</p>
+
+<p>
+  <strong>Hard disk:</strong>
+  <%= @accessory.hard_disk %>
+</p>
+
+<p>
+  <strong>Network card:</strong>
+  <%= @accessory.network_card %>
+</p>
+
+<p>
+  <strong>Server record:</strong>
+  <%= @accessory.server_record_id %>
+</p>
+
+<p>
+  <strong>Client record:</strong>
+  <%= @accessory.client_record_id %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @accessory.notes %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @accessory.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_accessory_path(@accessory) %> |
+<%= link_to 'Back', accessories_path %>

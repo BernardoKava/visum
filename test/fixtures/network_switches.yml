@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code_name: MyString
+  branding: MyString
+  number_of_ports: 1
+  s_location: MyString
+  ip_address: MyString
+  user_name: MyString
+  password: MyString
+  active: false
+  notes: MyText
+  user_id: 1
+
+two:
+  code_name: MyString
+  branding: MyString
+  number_of_ports: 1
+  s_location: MyString
+  ip_address: MyString
+  user_name: MyString
+  password: MyString
+  active: false
+  notes: MyText
+  user_id: 1

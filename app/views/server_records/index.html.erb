@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Server Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Virtual</th>
+      <th>Operating system</th>
+      <th>Person</th>
+      <th>Deployment status</th>
+      <th>Deployment date</th>
+      <th>Domain controller</th>
+      <th>Functional level</th>
+      <th>Notes</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @server_records.each do |server_record| %>
+      <tr>
+        <td><%= server_record.name %></td>
+        <td><%= server_record.description %></td>
+        <td><%= server_record.virtual %></td>
+        <td><%= server_record.operating_system_id %></td>
+        <td><%= server_record.person_id %></td>
+        <td><%= server_record.deployment_status_id %></td>
+        <td><%= server_record.deployment_date %></td>
+        <td><%= server_record.domain_controller %></td>
+        <td><%= server_record.functional_level_id %></td>
+        <td><%= server_record.notes %></td>
+        <td><%= server_record.user_id %></td>
+        <td><%= link_to 'Show', server_record %></td>
+        <td><%= link_to 'Edit', edit_server_record_path(server_record) %></td>
+        <td><%= link_to 'Destroy', server_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Server Record', new_server_record_path %>

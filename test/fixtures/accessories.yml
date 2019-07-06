@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  active: false
+  hard_disk: false
+  network_card: false
+  server_record_id: 1
+  client_record_id: 1
+  notes: MyText
+  user_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  active: false
+  hard_disk: false
+  network_card: false
+  server_record_id: 1
+  client_record_id: 1
+  notes: MyText
+  user_id: 1

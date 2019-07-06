@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tech Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Active</th>
+      <th>Notes</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tech_services.each do |tech_service| %>
+      <tr>
+        <td><%= tech_service.name %></td>
+        <td><%= tech_service.description %></td>
+        <td><%= tech_service.active %></td>
+        <td><%= tech_service.notes %></td>
+        <td><%= tech_service.user_id %></td>
+        <td><%= link_to 'Show', tech_service %></td>
+        <td><%= link_to 'Edit', edit_tech_service_path(tech_service) %></td>
+        <td><%= link_to 'Destroy', tech_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tech Service', new_tech_service_path %>

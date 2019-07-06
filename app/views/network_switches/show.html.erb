@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code name:</strong>
+  <%= @network_switch.code_name %>
+</p>
+
+<p>
+  <strong>Branding:</strong>
+  <%= @network_switch.branding %>
+</p>
+
+<p>
+  <strong>Number of ports:</strong>
+  <%= @network_switch.number_of_ports %>
+</p>
+
+<p>
+  <strong>S location:</strong>
+  <%= @network_switch.s_location %>
+</p>
+
+<p>
+  <strong>Ip address:</strong>
+  <%= @network_switch.ip_address %>
+</p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @network_switch.user_name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @network_switch.password %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @network_switch.active %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @network_switch.notes %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @network_switch.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_network_switch_path(@network_switch) %> |
+<%= link_to 'Back', network_switches_path %>

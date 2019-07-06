@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  network_switch_id: 1
+  port_number: 1
+  server_record_id: 1
+  client_record_id: 1
+  notes: MyText
+  user_id: 1
+  operating_system_id: 1
+
+two:
+  network_switch_id: 1
+  port_number: 1
+  server_record_id: 1
+  client_record_id: 1
+  notes: MyText
+  user_id: 1
+  operating_system_id: 1

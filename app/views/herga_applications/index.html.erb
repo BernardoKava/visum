@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Herga Applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Dev framework</th>
+      <th>Framework description</th>
+      <th>Framework version</th>
+      <th>Deployment status</th>
+      <th>Deployment date</th>
+      <th>Decomissioned date</th>
+      <th>Person</th>
+      <th>Server record</th>
+      <th>Inhouse build</th>
+      <th>Third party build</th>
+      <th>Notes</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @herga_applications.each do |herga_application| %>
+      <tr>
+        <td><%= herga_application.name %></td>
+        <td><%= herga_application.description %></td>
+        <td><%= herga_application.dev_framework %></td>
+        <td><%= herga_application.framework_description %></td>
+        <td><%= herga_application.framework_version %></td>
+        <td><%= herga_application.deployment_status_id %></td>
+        <td><%= herga_application.deployment_date %></td>
+        <td><%= herga_application.decomissioned_date %></td>
+        <td><%= herga_application.person_id %></td>
+        <td><%= herga_application.server_record_id %></td>
+        <td><%= herga_application.inhouse_build %></td>
+        <td><%= herga_application.third_party_build %></td>
+        <td><%= herga_application.notes %></td>
+        <td><%= herga_application.user_id %></td>
+        <td><%= link_to 'Show', herga_application %></td>
+        <td><%= link_to 'Edit', edit_herga_application_path(herga_application) %></td>
+        <td><%= link_to 'Destroy', herga_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Herga Application', new_herga_application_path %>

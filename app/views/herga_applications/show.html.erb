@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @herga_application.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @herga_application.description %>
+</p>
+
+<p>
+  <strong>Dev framework:</strong>
+  <%= @herga_application.dev_framework %>
+</p>
+
+<p>
+  <strong>Framework description:</strong>
+  <%= @herga_application.framework_description %>
+</p>
+
+<p>
+  <strong>Framework version:</strong>
+  <%= @herga_application.framework_version %>
+</p>
+
+<p>
+  <strong>Deployment status:</strong>
+  <%= @herga_application.deployment_status_id %>
+</p>
+
+<p>
+  <strong>Deployment date:</strong>
+  <%= @herga_application.deployment_date %>
+</p>
+
+<p>
+  <strong>Decomissioned date:</strong>
+  <%= @herga_application.decomissioned_date %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @herga_application.person_id %>
+</p>
+
+<p>
+  <strong>Server record:</strong>
+  <%= @herga_application.server_record_id %>
+</p>
+
+<p>
+  <strong>Inhouse build:</strong>
+  <%= @herga_application.inhouse_build %>
+</p>
+
+<p>
+  <strong>Third party build:</strong>
+  <%= @herga_application.third_party_build %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @herga_application.notes %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @herga_application.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_herga_application_path(@herga_application) %> |
+<%= link_to 'Back', herga_applications_path %>

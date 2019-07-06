@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticket_number: 1
+  request_type_id: 1
+  tech_service_id: 1
+  problem_description: MyText
+  request_status_id: 1
+  case_notes: MyText
+  case_resolution: MyText
+  resolved: false
+  user_id: 1
+
+two:
+  ticket_number: 1
+  request_type_id: 1
+  tech_service_id: 1
+  problem_description: MyText
+  request_status_id: 1
+  case_notes: MyText
+  case_resolution: MyText
+  resolved: false
+  user_id: 1

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tech_service.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tech_service.description %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @tech_service.active %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @tech_service.notes %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tech_service.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_tech_service_path(@tech_service) %> |
+<%= link_to 'Back', tech_services_path %>
