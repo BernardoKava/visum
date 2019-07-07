@@ -1,0 +1,19 @@
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="jumbotron" style="background-color: silver">
+      <div class="breadcrumb">YTD Average</div>
+      <div class="breadcrumb">
+        <%= bar_chart @incomes.where(year:@year).group(:income_type).average(:amount) %>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="jumbotron" style="background-color: silver">
+      <div class="breadcrumb">YTD Total</div>
+      <div class="breadcrumb">
+        <%= bar_chart @incomes.where(year:@year).group(:income_type).sum(:amount) %>
+      </div>
+    </div>
+  </div>
+</div>

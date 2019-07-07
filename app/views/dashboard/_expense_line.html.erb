@@ -1,0 +1,17 @@
+
+
+<div class="jumbotron" style="background-color: silver">
+  <div class="breadcrumb">YTD Average</div>
+  <div class="breadcrumb">
+    <%= line_chart @expenses.where(year:@year).group(:expense_type).average(:amount) %>
+  </div>
+</div>
+
+
+
+<div class="jumbotron" style="background-color: silver">
+  <div class="breadcrumb">YTD Total</div>
+  <div class="breadcrumb">
+    <%= line_chart @expenses.where(year:@year).group(:expense_type).sum(:amount) %>
+  </div>
+</div>

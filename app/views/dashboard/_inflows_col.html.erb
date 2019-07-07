@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="jumbotron" style="background-color: silver">
+      <div class="breadcrumb">YTD Average</div>
+      <div class="breadcrumb">
+        <%= column_chart @inflows.where(year:@year).group(:flowtype).average(:amount) %>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="jumbotron" style="background-color: silver">
+      <div class="breadcrumb">YTD Total</div>
+      <div class="breadcrumb">
+        <%= column_chart @inflows.where(year:@year).group(:flowtype).sum(:amount) %>
+      </div>
+    </div>
+  </div>
+</div>

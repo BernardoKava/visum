@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_06_142839) do
+ActiveRecord::Schema.define(version: 2019_07_06_151159) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "accessories", force: :cascade do |t|
     t.string "name"
@@ -18,12 +21,11 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.boolean "active"
     t.boolean "hard_disk"
     t.boolean "network_card"
-    t.integer "server_record_id"
-    t.integer "client_record_id"
     t.text "notes"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "quantity"
   end
 
   create_table "addresses", force: :cascade do |t|
@@ -31,10 +33,10 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.integer "user_id"
     t.boolean "active"
     t.integer "person_id"
-    t.date "from"
-    t.date "to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "from"
+    t.date "to"
   end
 
   create_table "bankaccounts", force: :cascade do |t|
@@ -44,11 +46,11 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.string "iban"
     t.string "bic"
     t.integer "person_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "account_code"
     t.string "account_name"
     t.boolean "active"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "bankcards", force: :cascade do |t|
@@ -69,11 +71,11 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.string "year"
     t.date "budget_date"
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.decimal "balance"
     t.string "budget_number"
     t.integer "reference_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "cashboxes", force: :cascade do |t|
@@ -82,10 +84,10 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.boolean "active"
     t.string "month"
     t.string "year"
-    t.text "notes"
-    t.decimal "balance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "notes"
+    t.decimal "balance"
   end
 
   create_table "cashflow_recons", force: :cascade do |t|
@@ -96,9 +98,9 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.decimal "correction_amount"
     t.string "authorised_by"
     t.date "authorisation_date"
-    t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "person_id"
   end
 
   create_table "cashflows", force: :cascade do |t|
@@ -107,9 +109,17 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.date "accounting_date"
     t.string "name"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.decimal "balance"
     t.string "cashflow_number"
     t.integer "reference_number"
+  end
+
+  create_table "client_accessories", force: :cascade do |t|
+    t.integer "client_record_id"
+    t.integer "accessory_id"
+    t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -125,20 +135,23 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
+    t.boolean "on_hold"
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer "inventory_id"
+    t.bigint "inventory_id"
     t.integer "user_id"
     t.text "commentary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "person_id"
     t.integer "cashflow_id"
     t.integer "saving_id"
     t.integer "delivery_id"
     t.integer "budget_id"
     t.integer "issue_management_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["inventory_id"], name: "index_comments_on_inventory_id"
   end
 
   create_table "corrective_actions", force: :cascade do |t|
@@ -149,28 +162,28 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.string "description"
     t.integer "person_id"
     t.integer "user_id"
-    t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
   end
 
   create_table "deliveries", force: :cascade do |t|
     t.date "delivery_date"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "receiver"
     t.integer "person_id"
     t.string "delivery_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "departments", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.boolean "active"
-    t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "person_id"
   end
 
   create_table "deployment_statuses", force: :cascade do |t|
@@ -200,9 +213,9 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.integer "person_id"
     t.boolean "referee_active"
     t.integer "user_id"
-    t.integer "employment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "employment_id"
   end
 
   create_table "employments", force: :cascade do |t|
@@ -214,13 +227,13 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.boolean "actve"
     t.integer "person_id"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "company_address"
     t.string "company_telephone"
     t.string "company_email"
     t.text "company_details"
     t.text "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "expenses", force: :cascade do |t|
@@ -246,9 +259,9 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.string "email"
     t.float "longitude"
     t.float "latitude"
-    t.string "institution_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "institution_code"
   end
 
   create_table "functional_levels", force: :cascade do |t|
@@ -286,13 +299,13 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.text "details"
     t.integer "user_id"
     t.integer "budget_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "income_type"
     t.string "year"
     t.string "month"
     t.integer "person_id"
     t.integer "inflowtype_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "inflows", force: :cascade do |t|
@@ -300,6 +313,8 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.text "details"
     t.integer "user_id"
     t.integer "cashflow_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "year"
     t.string "month"
     t.integer "person_id"
@@ -311,17 +326,18 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.string "picture"
     t.string "attachment"
     t.string "flowtype"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "owner"
+    t.string "cf_name"
+    t.string "bank_account"
   end
 
   create_table "inflowtypes", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.boolean "system_item"
-    t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "system_item"
+    t.boolean "active"
   end
 
   create_table "inventories", force: :cascade do |t|
@@ -329,11 +345,12 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.boolean "active"
     t.integer "user_id"
     t.date "period_from"
+    t.date "period_to"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "department_id"
     t.string "location"
     t.string "inventory_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "issue_managements", force: :cascade do |t|
@@ -349,14 +366,15 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.integer "inventory_id"
+    t.bigint "inventory_id"
     t.string "item"
     t.text "description"
     t.decimal "quantity"
     t.decimal "value"
-    t.boolean "virtual"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "virtual"
+    t.index ["inventory_id"], name: "index_items_on_inventory_id"
   end
 
   create_table "ledgers", force: :cascade do |t|
@@ -365,8 +383,11 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.date "ledger_date"
     t.string "name"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.decimal "annual_budget_bal"
     t.decimal "annual_cashflow_bal"
+    t.decimal "annual_saving_bal"
     t.decimal "annual_total_income"
     t.decimal "annual_total_expenditure"
     t.string "ledger_number"
@@ -375,8 +396,6 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.text "note"
     t.decimal "annual_budgeted_income"
     t.decimal "annual_budgeted_expenses"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "legacy_ulsterbanks", force: :cascade do |t|
@@ -413,11 +432,11 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.date "final_payment_date"
     t.integer "user_id"
     t.integer "person_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "internal_loan"
     t.decimal "outstanding"
     t.boolean "active"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "lodgements", force: :cascade do |t|
@@ -427,14 +446,22 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.integer "user_id"
     t.integer "saving_id"
     t.string "institution"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "year"
     t.string "month"
     t.integer "person_id"
     t.integer "financialinstitution_id"
+    t.integer "yeartitle_id"
+    t.integer "monthtitle_id"
     t.string "origination"
     t.text "rationale"
     t.string "day"
     t.integer "plannedactivity_id"
+  end
+
+  create_table "monthtitles", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -450,6 +477,7 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.boolean "active"
     t.text "notes"
     t.integer "user_id"
+    t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -469,6 +497,8 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.text "details"
     t.integer "user_id"
     t.integer "cashflow_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "month"
     t.string "year"
     t.integer "person_id"
@@ -480,26 +510,27 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.boolean "cash_withdrawal"
     t.string "picture"
     t.string "flowtype"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "owner"
+    t.string "cf_name"
+    t.string "bank_account"
   end
 
   create_table "outflowtypes", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.boolean "system_item"
-    t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "system_item"
+    t.boolean "active"
   end
 
   create_table "passwordrepositories", force: :cascade do |t|
     t.string "system_name"
     t.string "system_password"
     t.boolean "active"
-    t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_name"
   end
 
   create_table "paypals", force: :cascade do |t|
@@ -520,12 +551,13 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.string "surname"
     t.string "fullname"
     t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.date "dob"
     t.string "person_number"
     t.string "pps_number"
     t.boolean "system_item"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "User_id"
   end
 
   create_table "plannedactivities", force: :cascade do |t|
@@ -535,9 +567,9 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.decimal "target_amount"
     t.integer "user_id"
     t.integer "person_id"
-    t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
   end
 
   create_table "post_types", force: :cascade do |t|
@@ -556,10 +588,10 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.boolean "scanned"
     t.integer "user_id"
     t.integer "delivery_id"
-    t.string "owner"
-    t.integer "post_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "owner"
+    t.integer "post_type_id"
   end
 
   create_table "qualifications", force: :cascade do |t|
@@ -568,11 +600,11 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.date "from"
     t.date "to"
     t.string "grade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "active"
     t.integer "person_id"
     t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "rent_managements", force: :cascade do |t|
@@ -623,10 +655,10 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.text "definition"
     t.boolean "active"
     t.integer "user_id"
-    t.string "policy_code"
-    t.integer "rules_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "policy_code"
+    t.integer "rules_category_id"
   end
 
   create_table "rules_categories", force: :cascade do |t|
@@ -644,9 +676,9 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.decimal "correction_amount"
     t.string "authorised_by"
     t.date "authorisation_date"
-    t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "person_id"
   end
 
   create_table "savings", force: :cascade do |t|
@@ -655,9 +687,17 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.string "year"
     t.date "saving_date"
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.decimal "balance"
     t.string "saving_number"
     t.integer "reference_number"
+  end
+
+  create_table "server_accessories", force: :cascade do |t|
+    t.integer "accessory_id"
+    t.integer "server_record_id"
+    t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -712,7 +752,6 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.integer "client_record_id"
     t.text "notes"
     t.integer "user_id"
-    t.integer "operating_system_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -731,9 +770,9 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.string "phone"
     t.integer "user_id"
     t.boolean "active"
-    t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "person_id"
   end
 
   create_table "transactions", force: :cascade do |t|
@@ -745,9 +784,9 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.integer "cashbox_id"
     t.integer "person_id"
     t.integer "cashflow_id"
-    t.integer "outflowtype_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "outflowtype_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -756,6 +795,8 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "admin"
     t.boolean "access_granted"
     t.string "fullname"
@@ -763,8 +804,6 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.boolean "cfanalyser_access"
     t.boolean "pettycash_access"
     t.boolean "techweb_access"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -776,16 +815,26 @@ ActiveRecord::Schema.define(version: 2019_07_06_142839) do
     t.integer "user_id"
     t.integer "saving_id"
     t.string "institution"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "month"
     t.string "year"
     t.integer "person_id"
     t.integer "financialinstitution_id"
+    t.integer "yeartitle_id"
+    t.integer "monthtitle_id"
     t.string "origination"
     t.text "rationale"
     t.string "day"
     t.integer "plannedactivity_id"
+  end
+
+  create_table "yeartitles", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comments", "inventories"
+  add_foreign_key "items", "inventories"
 end

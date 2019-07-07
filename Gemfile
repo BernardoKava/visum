@@ -40,7 +40,7 @@ gem 'rails_admin'
 gem 'pg'
 gem 'gravtastic'
 gem 'chartkick'
-
+gem 'groupdate'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

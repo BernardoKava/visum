@@ -6,15 +6,12 @@ class IncomesController < ApplicationController
   def index
     @incomes = Income.all
 
-    @incomes.each do |income|
-      income.income_type = income.inflowtype.name
-      income.save
+    @incomes.each do |flow|
+      flow.income_type = flow.inflowtype.name
+      flow.owner = flow.person.fullname
+      flow.save
     end
 
-    @incomes.each do |income|
-      income.owner = income.person.fullname
-      income.save
-    end
   end
 
   # GET /incomes/1

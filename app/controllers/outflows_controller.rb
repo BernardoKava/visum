@@ -5,6 +5,15 @@ class OutflowsController < ApplicationController
   # GET /outflows.json
   def index
     @outflows = Outflow.all
+
+    @outflows.each do |flow|
+      flow.flowtype = flow.outflowtype.name
+      flow.owner = flow.person.fullname
+      flow.cf_name = flow.cashflow.name
+      flow.bank_account = flow.bankaccount.account_code
+      flow.save
+    end
+
   end
 
   # GET /outflows/1

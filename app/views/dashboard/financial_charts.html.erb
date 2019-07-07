@@ -1,0 +1,32 @@
+<% provide(:title, "Fincharts") %>
+
+
+
+
+
+<div class="jumbotron">
+
+  <div class="breadcrumb" style="background-color: lightskyblue">
+    Inflow - Outflow Performance
+  </div>
+
+  <%= render 'dashboard/inflows_line' %>
+  <%= render 'dashboard/inflows_col' %>
+  <%= render 'dashboard/outflows_line' %>
+  <%= render 'dashboard/outflows_col' %>
+
+
+  <div class="breadcrumb" style="background-color: lightskyblue">
+    Budget Allocation Overview
+  </div>
+
+  <%= render 'dashboard/income_line' %>
+  <%= render 'dashboard/expense_line' %>
+
+
+  <div class="breadcrumb" style="background-color: lightskyblue">
+    Cashflow Balance Performance
+  </div>
+
+  <%= render 'dashboard/cashflow_balance_line' %>
+</div>

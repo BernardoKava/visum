@@ -2,59 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce8e7c43-a74c-48d5-9e53-39bed73905f5" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/dashboard/_cashflow_balance_line.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/dashboard/_expense_line.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/dashboard/_income_line.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/dashboard/_inflows_col.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/dashboard/_inflows_line.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/dashboard/_outflows_col.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/dashboard/_outflows_line.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/dashboard/financial_charts.html.erb" />
       <change beforePath="$PROJECT_DIR$/.idea/visum.iml" afterPath="$PROJECT_DIR$/.idea/visum.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/budgets_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/budgets_controller.rb" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
       <change beforePath="$PROJECT_DIR$/app/controllers/expenses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/expenses_controller.rb" />
       <change beforePath="$PROJECT_DIR$/app/controllers/incomes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/incomes_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/address.rb" afterPath="$PROJECT_DIR$/app/models/address.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/bankaccount.rb" afterPath="$PROJECT_DIR$/app/models/bankaccount.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/bankcard.rb" afterPath="$PROJECT_DIR$/app/models/bankcard.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/budget.rb" afterPath="$PROJECT_DIR$/app/models/budget.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/cashbox.rb" afterPath="$PROJECT_DIR$/app/models/cashbox.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/cashflow.rb" afterPath="$PROJECT_DIR$/app/models/cashflow.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/cashflow_recon.rb" afterPath="$PROJECT_DIR$/app/models/cashflow_recon.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/comment.rb" afterPath="$PROJECT_DIR$/app/models/comment.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/corrective_action.rb" afterPath="$PROJECT_DIR$/app/models/corrective_action.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/delivery.rb" afterPath="$PROJECT_DIR$/app/models/delivery.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/department.rb" afterPath="$PROJECT_DIR$/app/models/department.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/email.rb" afterPath="$PROJECT_DIR$/app/models/email.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/employment.rb" afterPath="$PROJECT_DIR$/app/models/employment.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/employmentreference.rb" afterPath="$PROJECT_DIR$/app/models/employmentreference.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/expense.rb" afterPath="$PROJECT_DIR$/app/models/expense.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/financialinstitution.rb" afterPath="$PROJECT_DIR$/app/models/financialinstitution.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/income.rb" afterPath="$PROJECT_DIR$/app/models/income.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/inflow.rb" afterPath="$PROJECT_DIR$/app/models/inflow.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/inflowtype.rb" afterPath="$PROJECT_DIR$/app/models/inflowtype.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/inventory.rb" afterPath="$PROJECT_DIR$/app/models/inventory.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/issue_management.rb" afterPath="$PROJECT_DIR$/app/models/issue_management.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/item.rb" afterPath="$PROJECT_DIR$/app/models/item.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/loan_management.rb" afterPath="$PROJECT_DIR$/app/models/loan_management.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/loan_registration.rb" afterPath="$PROJECT_DIR$/app/models/loan_registration.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/lodgement.rb" afterPath="$PROJECT_DIR$/app/models/lodgement.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/outflow.rb" afterPath="$PROJECT_DIR$/app/models/outflow.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/outflowtype.rb" afterPath="$PROJECT_DIR$/app/models/outflowtype.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/person.rb" afterPath="$PROJECT_DIR$/app/models/person.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/plannedactivity.rb" afterPath="$PROJECT_DIR$/app/models/plannedactivity.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/post.rb" afterPath="$PROJECT_DIR$/app/models/post.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/post_type.rb" afterPath="$PROJECT_DIR$/app/models/post_type.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/qualification.rb" afterPath="$PROJECT_DIR$/app/models/qualification.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/rent_management.rb" afterPath="$PROJECT_DIR$/app/models/rent_management.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/resource.rb" afterPath="$PROJECT_DIR$/app/models/resource.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/rule.rb" afterPath="$PROJECT_DIR$/app/models/rule.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/rules_category.rb" afterPath="$PROJECT_DIR$/app/models/rules_category.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/saving.rb" afterPath="$PROJECT_DIR$/app/models/saving.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/saving_recon.rb" afterPath="$PROJECT_DIR$/app/models/saving_recon.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/service_provider.rb" afterPath="$PROJECT_DIR$/app/models/service_provider.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/telephone.rb" afterPath="$PROJECT_DIR$/app/models/telephone.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/transaction.rb" afterPath="$PROJECT_DIR$/app/models/transaction.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/withdrawal.rb" afterPath="$PROJECT_DIR$/app/models/withdrawal.rb" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/inflows_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/inflows_controller.rb" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/outflows_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/outflows_controller.rb" />
+      <change beforePath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
       <change beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190629235833_devise_create_users.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211154_create_addresses.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211237_create_bankaccounts.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211250_create_bankcards.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211259_create_budgets.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211307_create_cashboxes.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211316_create_cashflow_recons.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211325_create_cashflows.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211333_create_comments.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211342_create_corrective_actions.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211351_create_deliveries.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211359_create_departments.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211408_create_emails.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211416_create_employmentreferences.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211424_create_employments.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211433_create_expenses.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211443_create_financialinstitutions.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211452_create_incomes.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211500_create_inflows.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211507_create_inflowtypes.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211518_create_inventories.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211527_create_issue_managements.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211535_create_items.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211548_create_ledgers.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211556_create_legacy_ulsterbanks.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211622_create_loan_managements.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211635_create_loan_registrations.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211642_create_lodgements.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211650_create_outflows.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211713_create_outflowtypes.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211720_create_passwordrepositories.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211729_create_paypals.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211738_create_people.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211813_create_plannedactivities.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211822_create_post_types.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211833_create_posts.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211842_create_qualifications.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211850_create_rent_managements.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211900_create_resources.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211908_create_rules.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211916_create_rules_categories.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211926_create_saving_recons.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211933_create_savings.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211942_create_service_providers.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701211948_create_telephones.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701212009_create_transactions.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190701212018_create_withdrawals.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142306_create_server_records.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142317_create_functional_levels.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142324_create_deployment_statuses.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142333_create_operating_systems.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142342_create_accessories.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142351_create_herga_applications.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142358_create_request_types.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142406_create_tech_services.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142414_create_request_statuses.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142422_create_service_requests.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142429_create_network_switches.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142827_create_switch_ports.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190706142839_create_client_records.rb" afterPath="" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -72,63 +100,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/database.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7405">
-              <caret line="232" column="20" lean-forward="false" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="expenses_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/expenses_controller.rb">
+      <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="16" selection-end-column="7" />
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="incomes_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/incomes_controller.rb">
+      <file leaf-file-name="_header.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,20 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/dashboard/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" />
-        <option value="$PROJECT_DIR$/app/models/bankcard.rb" />
-        <option value="$PROJECT_DIR$/app/models/budget.rb" />
-        <option value="$PROJECT_DIR$/app/models/bankaccount.rb" />
-        <option value="$PROJECT_DIR$/app/models/cashflow_recon.rb" />
-        <option value="$PROJECT_DIR$/app/models/comment.rb" />
-        <option value="$PROJECT_DIR$/app/models/corrective_action.rb" />
-        <option value="$PROJECT_DIR$/app/models/delivery.rb" />
-        <option value="$PROJECT_DIR$/app/models/department.rb" />
-        <option value="$PROJECT_DIR$/app/models/email.rb" />
-        <option value="$PROJECT_DIR$/app/models/employment.rb" />
-        <option value="$PROJECT_DIR$/app/models/employmentreference.rb" />
-        <option value="$PROJECT_DIR$/app/models/expense.rb" />
         <option value="$PROJECT_DIR$/app/models/financialinstitution.rb" />
         <option value="$PROJECT_DIR$/app/models/income.rb" />
         <option value="$PROJECT_DIR$/app/models/inflow.rb" />
@@ -188,11 +170,25 @@
         <option value="$PROJECT_DIR$/app/models/cashflow.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/controllers/budgets_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/expenses_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/incomes_controller.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/migrate/20190706142324_create_deployment_statuses.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/app/controllers/inflows_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/incomes_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/expenses_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/outflows_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_inflows_line.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_outflows_line.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_outflows_col.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_inflows_col.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_expense_line.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_income_line.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/financial_charts.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_cashflow_balance_line.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
       </list>
     </option>
   </component>
@@ -277,6 +273,27 @@
             <path>
               <item name="visum" type="b2602c69:ProjectViewProjectNode" />
               <item name="visum" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="visum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="visum" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="outflows" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="visum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="visum" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="static_pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="visum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="visum" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -289,12 +306,6 @@
               <item name="visum" type="b2602c69:ProjectViewProjectNode" />
               <item name="visum" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="visum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="visum" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="migrate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -448,12 +459,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561826687230</updated>
-      <workItem from="1561826690540" duration="20047000" />
+      <workItem from="1561826690540" duration="36979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20047000" />
+    <option name="totallyTimeSpent" value="36979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -473,11 +484,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.173297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11934605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -500,146 +511,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/budget.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/corrective_action.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/delivery.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="61" lean-forward="false" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/department.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/email.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/employment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/employmentreference.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/expense.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/financialinstitution.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/income.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/inflow.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/inventory.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/issue_management.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ledger.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/loan_management.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/lodgement.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/outflow.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -844,37 +719,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/expenses_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="16" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/incomes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,18 +745,203 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7405">
-          <caret line="232" column="20" lean-forward="false" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
+        <state relative-caret-position="227">
+          <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
+    <entry file="file://$PROJECT_DIR$/app/models/outflow.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="72">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/inflows_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6959">
+          <caret line="658" column="40" lean-forward="false" selection-start-line="658" selection-start-column="40" selection-end-line="658" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/expenses_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/incomes_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/outflows_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="42" column="15" lean-forward="false" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/spring.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_outflows_col.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_inflows_col.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_outflows_line.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_cashflow_balance_line.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_inflows_line.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="23" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_expense_line.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_income_line.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/financial_charts.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
